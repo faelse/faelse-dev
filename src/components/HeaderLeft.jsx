@@ -5,6 +5,7 @@ import {
   BiMailSend,
   BiRightArrowAlt,
 } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function HeaderLeft() {
   return (
@@ -22,42 +23,42 @@ function HeaderLeft() {
               transform transition-all duration-200 group-hover:opacity-100
                group-hover:translate-x-0"
               />
-              <a
-                href={`#${item}`}
+              <Link
+                to={`/#${item}`}
                 className="transition-all duration-200 hover:translate-x-3"
               >
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
       <div className="fixed left-0 right-0 top-0 z-10 flex justify-evenly bg-primary p-5 text-white md:hidden">
-        <a href="#home" className="flex flex-col items-center justify-center">
+        <Link to="/#home" className="flex flex-col items-center justify-center">
           <BiHome className="text-2xl" />
           <span className="text-xs">Home</span>
-        </a>
-        <a
-          href="#experience"
+        </Link>
+        <Link
+          to="/#experience"
           className="flex flex-col items-center justify-center"
         >
           <BiBriefcase className="text-2xl" />
           <span className="text-xs">Experience</span>
-        </a>
-        <a
-          href="#project"
+        </Link>
+        <Link
+          to="/#project"
           className="flex flex-col items-center justify-center"
         >
           <BiCode className="text-2xl" />
           <span className="text-xs">Projects</span>
-        </a>
-        <a
-          href="#contact"
+        </Link>
+        <Link
+          to="/#contact"
           className="flex flex-col items-center justify-center"
         >
           <BiMailSend className="text-2xl" />
           <span className="text-xs">Contact</span>
-        </a>
+        </Link>
       </div>
     </div>
   );
