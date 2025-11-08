@@ -17,3 +17,7 @@
 .bg-secundary {
   background-color: var(--color-secundary) !important;
 }
+
+::-webkit-scrollbar {
+  width: 20px;
+}
