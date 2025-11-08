@@ -73,6 +73,7 @@ export default function ProjectDetail() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           <div className="md:col-span-2">
             <p className="text-gray-800 leading-relaxed whitespace-pre-wrap">
+              <span className="text-gray-500"># </span>
               {project.desc}
             </p>
 
@@ -130,7 +131,8 @@ export default function ProjectDetail() {
             <div className="w-full text-left">
               <h5 className="text-sm text-gray-700">Details</h5>
               <p className="mt-2 text-xs text-gray-600">
-                More project-specific details here.
+                <span className="text-gray-400"># </span>
+                {project.detail}
               </p>
             </div>
           </aside>
