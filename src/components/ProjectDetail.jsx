@@ -57,8 +57,8 @@ export default function ProjectDetail() {
 
         <header className="flex items-center justify-between">
           <h1 className="text-3xl font-mono text-gray-900">
-            <span className="text-cyan-400">~</span>
-            <span className="text-[#ff8c40]">/{project.title}</span>
+            ~/
+            {project.title}
           </h1>
           <a
             href={project.repo}
