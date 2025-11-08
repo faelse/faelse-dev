@@ -1,43 +1,6 @@
-function Project() {
-  const projects = [
-    {
-      title: "Project 1",
-      stack: "Tech Stack",
-      desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?`,
-      logos: [null, null, null],
-    },
-    {
-      title: "Project 2",
-      stack: "Tech Stack",
-      desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?`,
-      logos: [null, null, null],
-    },
-    {
-      title: "Project 3",
-      stack: "Tech Stack",
-      desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?`,
-      logos: [null, null, null],
-    },
-    {
-      title: "Project 4",
-      stack: "Tech Stack",
-      desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?`,
-      logos: [null, null, null],
-    },
-    {
-      title: "Project 5",
-      stack: "Tech Stack",
-      desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?`,
-      logos: [null, null, null],
-    },
-    {
-      title: "Project 6",
-      stack: "Tech Stack",
-      desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?`,
-      logos: [null, null, null],
-    },
-  ];
+import { projects } from "../data/projects";
 
+function Project({ onOpen }) {
   return (
     <section
       id="project"
@@ -50,9 +13,10 @@ function Project() {
           {projects.map((project, i) => (
             <article
               key={i}
+              onClick={() => onOpen && onOpen(i)}
               className="group bg-white/60 rounded-xl border border-gray-200 p-6 shadow-sm transition-transform transform hover:-translate-y-1 hover:shadow-lg cursor-pointer flex flex-col justify-between min-h-80 md:min-h-88"
             >
-              <header className="flex flex-col items-start">
+              <header className="flex flex-col items-start cursor-pointer">
                 <div>
                   <h2 className="text-2xl font-semibold">{project.title}</h2>
                   <h3 className="text-sm text-gray-700 mt-1">
@@ -70,7 +34,7 @@ function Project() {
                   {project.logos.map((logo, j) => (
                     <div
                       key={j}
-                      className="h-9 w-9 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center text-[11px] text-gray-400"
+                      className="h-9 w-9 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center text-[11px] text-gray-400 cursor-pointer"
                     >
                       Logo
                     </div>

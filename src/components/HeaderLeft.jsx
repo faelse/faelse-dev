@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   BiBriefcase,
   BiCode,
@@ -7,8 +8,15 @@ import {
 } from "react-icons/bi";
 
 function HeaderLeft() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   return (
-    <div className="md:flex-1">
+    <div
+      className={`md:flex-1 transition-all duration-300 ${
+        mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
+      }`}
+    >
       <div className="min-h-screen top-0 hidden md:sticky md:flex items-center justify-center bg-primary text-white">
         <ul className="flex flex-col gap-10">
           {["home", "experience", "project", "contact"].map((item) => (
