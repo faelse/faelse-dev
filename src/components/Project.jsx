@@ -16,12 +16,16 @@ function Project() {
             <article
               key={project.id}
               onClick={() => navigate(`/project/${project.id}`)}
-              className="group bg-white/60 rounded-xl border border-gray-200 p-6 shadow-sm transition-transform transform hover:-translate-y-1 hover:shadow-lg cursor-pointer flex flex-col justify-between min-h-80 md:min-h-88"
+              className="group bg-white/60 rounded-xl border border-gray-200 p-6 shadow-sm 
+              transition-transform transform hover:-translate-y-1 hover:shadow-lg cursor-pointer 
+              flex flex-col justify-between min-h-80 md:min-h-88"
             >
               <header className="flex flex-col items-start">
                 <div>
-                  <h2 className="text-2xl font-semibold">{project.title}</h2>
-                  <h3 className="text-sm text-gray-700 mt-1">
+                  <h2 className="text-2xl font-semibold text-(--color-primary)">
+                    {project.title}
+                  </h2>
+                  <h3 className="text-sm text-gray-950 mt-1">
                     {project.stack}
                   </h3>
                 </div>
