@@ -1,9 +1,18 @@
 import { useEffect } from "react";
 import { BiChevronLeft } from "react-icons/bi";
+import { useParams, useNavigate } from "react-router-dom";
+import { projects } from "../data/projects";
 
-export default function ProjectDetail({ project, onClose }) {
+export default function ProjectDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const project = projects.find((p) => p.id === id);
+
   useEffect(() => {
-    if (!project) return;
+    if (!project) {
+      navigate("/", { replace: true });
+      return;
+    }
     window.requestAnimationFrame(() => {
       try {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -11,7 +20,7 @@ export default function ProjectDetail({ project, onClose }) {
         window.scrollTo(0, 0);
       }
     });
-  }, [project]);
+  }, [project, navigate]);
 
   if (!project) return null;
 
@@ -19,7 +28,7 @@ export default function ProjectDetail({ project, onClose }) {
     <div className="min-h-screen w-full flex items-start justify-center p-8">
       <div className="max-w-4xl w-full p-6">
         <button
-          onClick={onClose}
+          onClick={() => navigate(-1)}
           className="flex items-center gap-2 cursor-pointer text-sm text-gray-600 mb-4"
         >
           <BiChevronLeft className="text-2xl" /> Back

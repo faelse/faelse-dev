@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: "1",
     title: "Project 1",
     stack: "Tech Stack",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?",
@@ -8,6 +9,7 @@ export const projects = [
     repo: "https://github.com/faelse/faelse-dev",
   },
   {
+    id: "2",
     title: "Project 2",
     stack: "Tech Stack",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?",
@@ -16,6 +18,7 @@ export const projects = [
     repo: "https://github.com/faelse/faelse-dev",
   },
   {
+    id: "3",
     title: "Project 3",
     stack: "Tech Stack",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?",
@@ -24,6 +27,7 @@ export const projects = [
     repo: "https://github.com/faelse/faelse-dev",
   },
   {
+    id: "4",
     title: "Project 4",
     stack: "Tech Stack",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?",
@@ -32,6 +36,7 @@ export const projects = [
     repo: "https://github.com/faelse/faelse-dev",
   },
   {
+    id: "5",
     title: "Project 5",
     stack: "Tech Stack",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?",
@@ -40,6 +45,7 @@ export const projects = [
     repo: "https://github.com/faelse/faelse-dev",
   },
   {
+    id: "6",
     title: "Project 6",
     stack: "Tech Stack",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis corrupti excepturi nemo animi earum aperiam voluptatum, sequi natus dolor ipsam odio architecto inventore at optio odit, id neque iusto quis?",
