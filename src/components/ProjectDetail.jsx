@@ -13,12 +13,12 @@ export default function ProjectDetail() {
 
   const handleBack = () => {
     setLeaving(true);
-    backTimeout.current = setTimeout(() => navigate(-1), 300);
+    backTimeout.current = setTimeout(() => navigate("/#project"), 300);
   };
 
   useEffect(() => {
     if (!project) {
-      navigate("/", { replace: true });
+      navigate("/#project", { replace: true });
       return;
     }
     window.requestAnimationFrame(() => {
@@ -51,34 +51,28 @@ export default function ProjectDetail() {
           onClick={handleBack}
           className="flex items-center gap-2 cursor-pointer text-sm text-gray-600 mb-4"
         >
-          <BiChevronLeft className="text-2xl text-red-500" />{" "}
-          <span className="text-red-600">Back</span>
+          <BiChevronLeft className="text-2xl text-gray-600" />{" "}
+          <span className="text-gray-500">Back</span>
         </button>
 
         <header className="flex items-center justify-between">
-          <h1 className="text-3xl font-mono text-gray-900">
-            ~/
+          <h1 className="text-3xl font-mono">
+            <span className="text-gray-600">~/</span>
             {project.title}
           </h1>
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 text-sm hover:underline"
-          >
-            View code
-          </a>
         </header>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           <div className="md:col-span-2">
             <p className="text-gray-800 leading-relaxed whitespace-pre-wrap">
-              <span className="text-gray-500"># </span>
+              <span className="text-(--color-secondary)"># </span>
               {project.desc}
             </p>
 
             <div className="mt-6">
-              <h4 className="text-sm text-gray-700 mb-2">Demo / Links</h4>
+              <h4 className="text-sm text-gray-700 mb-2">
+                Demo <span className="text-(--color-secondary)">/</span> Links
+              </h4>
               <div className="flex gap-3">
                 {project.demo ? (
                   <a
@@ -115,7 +109,7 @@ export default function ProjectDetail() {
 
           <aside className="rounded p-4 flex flex-col gap-4 items-start">
             <div className="w-full text-left">
-              <h5 className="text-sm text-gray-700">Tech</h5>
+              <h5 className="text-sm text-gray-700">Tecnologias</h5>
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.logos.map((logo, i) => (
                   <div
@@ -129,9 +123,9 @@ export default function ProjectDetail() {
             </div>
 
             <div className="w-full text-left">
-              <h5 className="text-sm text-gray-700">Details</h5>
+              <h5 className="text-sm text-gray-700">Detalhes</h5>
               <p className="mt-2 text-xs text-gray-600">
-                <span className="text-gray-400"># </span>
+                <span className="text-(--color-secondary)"># </span>
                 {project.detail}
               </p>
             </div>

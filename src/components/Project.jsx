@@ -8,7 +8,7 @@ function Project() {
       id="project"
       className="min-h-screen w-full flex flex-col items-center justify-center gap-12 p-6 md:p-12 xl:px-32"
     >
-      <h1 className="text-center text-4xl font-light">Projects</h1>
+      <h1 className="text-center text-4xl font-light">Projetos</h1>
 
       <div className="w-full max-w-6xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

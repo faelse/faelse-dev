@@ -1,11 +1,11 @@
-import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
+import { BiLogoGithub, BiLogoGmail, BiLogoLinkedin } from "react-icons/bi";
 import image from "../assets/image-test.jpg";
 
 function Home() {
   return (
     <div
       id="home"
-      className="flex min-h-screen w-full items-center justify-center "
+      className="flex min-h-screen w-full items-center justify-center pt-20 sm:pt-0"
     >
       <div className="flex flex-col items-center justify-center gap-8 p-5 text-center">
         <img
@@ -24,7 +24,7 @@ function Home() {
             className="bg-linear-to-r from-(--color-secondary) to-(--color-primary) 
           bg-clip-text text-xl font-semibold text-transparent md:text-2xl lg:text-3xl"
           >
-            Systems Developer
+            Desenvolvedor de Sitemas
           </h3>
           <p className="max-w-[700px] text-sm text-gray-500">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
@@ -54,6 +54,18 @@ function Home() {
             aria-label="LinkedIn"
           >
             <BiLogoLinkedin
+              className="h-10 w-10 cursor-pointer rounded-full border-2 border-transparent bg-(--color-primary)
+            p-2 text-white transition-all duration-200 hover:scale-110 hover:border-bg-(--color-primary)
+          hover:bg-white hover:text-(--color-primary) md-h-12"
+            />
+          </a>
+          <a
+            href="mailto:tech.rafaellima@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <BiLogoGmail
               className="h-10 w-10 cursor-pointer rounded-full border-2 border-transparent bg-(--color-primary)
             p-2 text-white transition-all duration-200 hover:scale-110 hover:border-bg-(--color-primary)
           hover:bg-white hover:text-(--color-primary) md-h-12"

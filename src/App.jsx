@@ -6,7 +6,6 @@ import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import AboutMeSection from "./components/AboutMeSection";
 import ProjectDetail from "./components/ProjectDetail";
 
 function App() {
@@ -52,7 +51,6 @@ function App() {
                   <Experience />
                   <Project />
                   <Contact />
-                  <AboutMeSection />
                 </>
               }
             />
